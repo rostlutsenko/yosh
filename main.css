@@ -534,9 +534,21 @@ nav {
 /* 8. main media */
 
 @media only all and (max-width: 970px) {
-    /* nav {
-        display: none;
-    } */
+    nav {
+        all: unset;
+        position: absolute;
+        display: flex;
+        align-items: flex-end;
+        justify-content: center;
+        top: 100%;
+        width: 100vw;
+        /* height: 60vh; */
+        background: var(--black);
+        z-index: 20;
+        transform: scaleY(0);
+        transform-origin: top;
+        transition: transform 250ms ease-in-out;
+    }
 
     .burger {
         display: block;
@@ -547,7 +559,7 @@ nav {
         right: 2rem;
         transform: translateY(-50%);
         cursor: pointer;
-        /* outline: hidden; */
+        z-index: 999;
     }
     
     .burger::before,
@@ -569,13 +581,17 @@ nav {
     }
 
     input[type=checkbox]:checked ~ nav {
-        position: absolute;
-        display: block;
-        
+        transform: scale(1);
     }
 
-    input[type=checkbox]:checked ~ nav .header__menu {
-        flex-direction: column;
+    .header__menu {
+        display: inline-block;
+        padding: 3rem 0;
+    }
+
+    .header__menu a {
+        /* color: green; */
+        font-size: 2.75rem;
     }
 
     .promo {
