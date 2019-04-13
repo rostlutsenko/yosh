@@ -534,9 +534,9 @@ nav {
 /* 8. main media */
 
 @media only all and (max-width: 970px) {
-    nav {
+    /* nav {
         display: none;
-    }
+    } */
 
     .burger {
         display: block;
