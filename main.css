@@ -541,8 +541,7 @@ nav {
         align-items: flex-end;
         justify-content: center;
         top: 100%;
-        width: 100vw;
-        /* height: 60vh; */
+        width: 100%;
         background: var(--black);
         z-index: 20;
         transform: scaleY(0);
