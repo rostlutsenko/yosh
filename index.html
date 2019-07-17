@@ -1,4 +1,3 @@
-<!-- Landing page template for a fictional YOSH Sidewalk shoes -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,35 +10,44 @@
     <link rel="stylesheet" type="text/css" media="screen" href="main.css">    
 </head>
 <body>
-<div id="wrapper">
+<div class="wrapper">
     <header>
-        <div id="header">
+        <div class="inner__header">
             <div class="header__logo">
-                <a href="/">YOSH</a>
-                <span class="header__slogan">Your Own Shoes</span>     
+                <a class="logo" href="#">YOSH</a>
             </div>
-            <input id="burger" type="checkbox" name="checkbox">
-            <label class="burger" for="burger"></label>
-            <nav>
-                <ul class="header__menu">
-                    <li><a href="#gallery">Gallery</a></li>                    
-                    <li><a href="#order">Order</a></li>
-                    <li><a href="#payment-and-delivery">Payment & Delivery</a></li>
-                    <li><a href="#reviews">Reviews</a></li>
-                    <li><a href="#contacts">Contacts</a></li>
-                </ul>
-            </nav>
-        </div>        
+            <div class="burger">
+                <span class="burger__line--top"></span>
+                <span class="burger__line--medium"></span>
+                <span class="burger__line--bottom"></span>
+            </div>
+        </div>
+        <nav>
+            <ul class="navigation">
+                <li><a href="#gallery">Gallery</a></li>                    
+                <li><a href="#order">Order</a></li>
+                <li><a href="#payment-and-delivery">Payment & Delivery</a></li>
+                <li><a href="#reviews">Reviews</a></li>
+                <li><a href="#contacts">Contacts</a></li>
+            </ul>
+        </nav>    
     </header>
-
     <main>
-
         <section>
-            <div class="promo">
-                <h1>YOSH Sidewalk™ High top sneakers</h1>
-                <img src="img/yosh-sidewalk.jpg" alt="YOSH Sidewalk High top sneakers" class="promo__img">
-                <div class="promo__decription">                
-                        <p>Be ready for anything in the YOSH Sidewalk sneakers.</p>
+            <div class="promo--wrapper">
+                <div class="promo">
+                    <figure class="inner__promo">
+                        <div class="promo__img--wrapper">
+                            <img class="promo__img" src="img/yosh-sidewalk.jpg" alt="convers">
+                        </div>
+                        <figcaption>
+                            <p>YOSH Sidewalk™ High top <span>sneakers</span></p>
+                        </figcaption>
+                    </figure>
+                </div>
+                <div class="promo__description--wrapper">
+                    <div class="promo__description">                
+                        <p>Be ready for anything in the YOSH Sidewalk sneakers:</p>
                         <ul>
                             <li>Canvas upper in an athletic high top lifestyle sneaker style with a round, cap toe</li>
                             <li>Lace-up front with D-rings</li>
@@ -47,51 +55,45 @@
                             <li> Rubber midsole</li>
                             <li>Canvas lining, cushioning insole</li>
                         </ul>                
+                    </div>
                 </div>
-                <div class="promo__price">$54.99</div> 
-                <a class="promo__button" href="#order">Order now!</a>
-            </div>   
+            </div>
         </section>
-
         <section>
-                <div class="gallery">
-                    <h2 id="gallery">Gallery</h2>
-                    <a href="img/yosh-sidewalk-black-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-black.jpg" alt="YOSH Sidewalk Black"></a>
-                    <a href="img/yosh-sidewalk-blue-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-blue.jpg" alt="YOSH Sidewalk Blue"></a>
-                    <a href="img/yosh-sidewalk-white-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-white.jpg" alt="YOSH Sidewalk White"></a>
-                </div>
-            </section>
-
+            <div class="gallery">
+                <h2 id="gallery">Gallery</h2>
+                <a href="img/yosh-sidewalk-black-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-black.jpg" alt="YOSH Sidewalk Black"></a>
+                <a href="img/yosh-sidewalk-blue-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-blue.jpg" alt="YOSH Sidewalk Blue"></a>
+                <a href="img/yosh-sidewalk-white-big.jpg" title="Click to enlarge"><img src="img/yosh-sidewalk-white.jpg" alt="YOSH Sidewalk White"></a>
+            </div>
+        </section>
         <section>
             <div class="order">
                 <h2 id="order">Order</h2>
-                
                 <form action="/">
-                        <div class="order__color">
-                                <p>Pick a color:</p> 
-                                <input type="radio" id="color-black" name="order-color" value="order-color-black"
-                            required>
-                                <label for="color-black">Black</label>
-                                <input type="radio" id="color-blue" name="order-color" value="order-color-blue" required>
-                                <label for="color-blue">Blue</label>    
-                                <input type="radio" id="color-white" name="order-color" value="order-color-white" required>
-                                <label for="color-white">White</label>
-                            </div>
-                    <div class="order__size">
-                            <label for="order-size">Pick a size*:</label>
-                            <select id="order-size" required>
-                                <option value="">--Please choose an option--</option>
-                                <option value="order-size-3">3 (EUR 35)</option>                           
-                                <option value="order-size-4">4 (EUR 36.5)</option>
-                                <option value="order-size-5">5 (EUR 37.5)</option>
-                                <option value="order-size-6">6 (EUR 39)</option>
-                                <option value="order-size-7">7 (EUR 40)</option>
-                                <option value="order-size-8">8 (EUR 41.5)</option>
-                                <option value="order-size-9">9 (EUR 42.5)</option>
-                                <option value="order-size-10">10 (EUR 44)</option>     
-                            </select>
-
+                    <div class="order__color">
+                            <p>Pick a color:</p> 
+                            <input type="radio" id="color-black" name="order-color" value="order-color-black" required>
+                            <label for="color-black">Black</label>
+                            <input type="radio" id="color-blue" name="order-color" value="order-color-blue" required>
+                            <label for="color-blue">Blue</label>    
+                            <input type="radio" id="color-white" name="order-color" value="order-color-white" required>
+                            <label for="color-white">White</label>
                         </div>
+                    <div class="order__size">
+                        <label for="order-size">Pick a size*:</label>
+                        <select id="order-size" required>
+                            <option value="">--Please choose an option--</option>
+                            <option value="order-size-3">3 (EUR 35)</option>                           
+                            <option value="order-size-4">4 (EUR 36.5)</option>
+                            <option value="order-size-5">5 (EUR 37.5)</option>
+                            <option value="order-size-6">6 (EUR 39)</option>
+                            <option value="order-size-7">7 (EUR 40)</option>
+                            <option value="order-size-8">8 (EUR 41.5)</option>
+                            <option value="order-size-9">9 (EUR 42.5)</option>
+                            <option value="order-size-10">10 (EUR 44)</option>     
+                        </select>
+                    </div>
                    
                     <div class="order__name">
                         Your name: <input type="text" name="order-name" required>
@@ -102,7 +104,7 @@
                     <div class="order__price">$54.99</div> 
                     <button type="submit" value="Order" class="order__button">Order</button>
                     <table class="order__sizes">
-                            <caption>*Size chart</caption>
+                        <caption>*Size chart</caption>
                             <colgroup>
                                 <col>
                                 <col>
@@ -207,7 +209,6 @@
         </section>
 
     </main>
-
     <footer>
         <div class="footer">
             <div class="footer__contacts">
@@ -230,8 +231,7 @@
             </div>
         </div>
     </footer>
-
 </div>
-<script src="main.js"></script>
+<script src="js/main.js"></script>
 </body>
 </html>
