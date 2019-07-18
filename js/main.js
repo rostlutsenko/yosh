@@ -16,3 +16,5 @@ document.querySelector('.burger').addEventListener('click', function() {
         }, 250);
     }
 });
+
+console.log('test');
